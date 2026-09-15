@@ -1,0 +1,33 @@
+import Link from "next/link";
+import type { Project } from "@/lib/projects";
+
+export function ProjectCard({ project }: { project: Project }) {
+  return (
+    <Link
+      href={`/projects/${project.slug}`}
+      className="group block overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-accent"
+    >
+      <img
+        src={project.sections[0].screenshot}
+        alt={`${project.title} screenshot`}
+        className="h-40 w-full object-cover"
+      />
+      <div className="p-5">
+        <h3 className="font-heading text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
+          {project.title}
+        </h3>
+        <p className="mt-1 text-sm text-muted">{project.tagline}</p>
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {project.skills.map((skill) => (
+            <li
+              key={skill}
+              className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted"
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Link>
+  );
+}
