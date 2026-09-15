@@ -15,8 +15,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name — Portfolio",
-  description: "Software engineering portfolio and project showcase.",
+  title: "S M Afnan Haider — Portfolio",
+  description:
+    "Software Engineer building AI-powered tools — RAG systems, ML platforms, and full-stack applications.",
 };
 
 export default function RootLayout({

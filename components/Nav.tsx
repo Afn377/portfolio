@@ -12,7 +12,7 @@ export function Nav({
           href="/"
           className="font-heading text-lg font-semibold text-foreground"
         >
-          Your Name
+          S M Afnan Haider
         </Link>
         {variant === "landing" ? (
           <ul className="flex gap-6 text-sm text-muted">

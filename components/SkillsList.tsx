@@ -1,13 +1,19 @@
 import { Reveal } from "@/components/Reveal";
 
 const skills = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
   "Python",
+  "Java",
+  "JavaScript",
+  "SQL",
+  "React",
+  "Django REST Framework",
+  "FastAPI",
+  "PyTorch",
+  "scikit-learn",
+  "Hugging Face",
   "PostgreSQL",
-  "Tailwind CSS",
+  "AWS",
+  "Docker",
   "Git",
 ];
 

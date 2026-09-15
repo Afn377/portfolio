@@ -5,13 +5,16 @@ export function Hero() {
     <section className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 px-6 py-24 md:flex-row">
       <Reveal className="flex-1 text-center md:text-left">
         <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
-          Your Name
+          S M Afnan Haider
         </h1>
-        <p className="mt-3 text-lg text-link">Software Engineering Student</p>
+        <p className="mt-3 text-lg text-link">
+          Software Engineer | Data & AI
+        </p>
         <p className="mt-6 max-w-xl text-muted">
-          A short bio goes here — a couple of sentences about who you are,
-          what you build, and what kind of internship you&apos;re looking
-          for.
+          Computer Science & Data Science student at Rutgers University
+          (3.95 GPA) building AI-powered tools — from RAG-based retrieval
+          systems to full-stack ML platforms. Currently a part-time data science
+          lecturer and OIT lab supervisor.
         </p>
         <div className="mt-8 flex justify-center gap-4 md:justify-start">
           <a

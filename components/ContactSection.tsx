@@ -1,9 +1,9 @@
 import { Reveal } from "@/components/Reveal";
 
 const links = [
-  { label: "Email", href: "mailto:you@example.com" },
-  { label: "GitHub", href: "https://github.com/yourname" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourname" },
+  { label: "Email", href: "mailto:sm.afnan.haider@gmail.com" },
+  { label: "GitHub", href: "https://github.com/Afn377" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/AfnanHaider" },
 ];
 
 export function ContactSection() {
