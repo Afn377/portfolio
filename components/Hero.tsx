@@ -11,10 +11,11 @@ export function Hero() {
           Software Engineer | Data & AI
         </p>
         <p className="mt-6 max-w-xl text-muted">
-          Computer Science & Data Science student at Rutgers University
-          (3.95 GPA) building AI-powered tools — from RAG-based retrieval
-          systems to full-stack ML platforms. Currently a part-time data science
-          lecturer and OIT lab supervisor.
+          Computer Science & Data Science student at Rutgers University (3.95
+          GPA). I build things like RAG pipelines and ML-powered apps in my free
+          time, and right now I supervise Rutgers OIT&apos;s 200+ person IT
+          consultant program while helping run the Coding and Social Lounge for
+          CS students.
         </p>
         <div className="mt-8 flex justify-center gap-4 md:justify-start">
           <a
