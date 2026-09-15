@@ -17,14 +17,14 @@ export function Nav({
         {variant === "landing" ? (
           <ul className="flex gap-6 text-sm text-muted">
             <li>
-              <a href="#skills" className="transition-colors hover:text-accent">
+              <a href="#skills" className="transition-colors hover:text-link">
                 Skills
               </a>
             </li>
             <li>
               <a
                 href="#projects"
-                className="transition-colors hover:text-accent"
+                className="transition-colors hover:text-link"
               >
                 Projects
               </a>
@@ -32,7 +32,7 @@ export function Nav({
             <li>
               <a
                 href="#contact"
-                className="transition-colors hover:text-accent"
+                className="transition-colors hover:text-link"
               >
                 Contact
               </a>
@@ -41,7 +41,7 @@ export function Nav({
         ) : (
           <Link
             href="/"
-            className="text-sm text-muted transition-colors hover:text-accent"
+            className="text-sm text-muted transition-colors hover:text-link"
           >
             ← Home
           </Link>

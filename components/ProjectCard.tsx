@@ -13,7 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
         className="h-40 w-full object-cover"
       />
       <div className="p-5">
-        <h3 className="font-heading text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
+        <h3 className="font-heading text-lg font-semibold text-foreground transition-colors group-hover:text-link">
           {project.title}
         </h3>
         <p className="mt-1 text-sm text-muted">{project.tagline}</p>

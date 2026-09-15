@@ -11,6 +11,7 @@ const config: Config = {
         muted: "#94A3B8",
         border: "#27272A",
         accent: "#2563EB",
+        link: "#3B82F6",
         destructive: "#DC2626",
       },
       fontFamily: {

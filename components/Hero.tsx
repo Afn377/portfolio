@@ -7,7 +7,7 @@ export function Hero() {
         <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
           Your Name
         </h1>
-        <p className="mt-3 text-lg text-accent">Software Engineering Student</p>
+        <p className="mt-3 text-lg text-link">Software Engineering Student</p>
         <p className="mt-6 max-w-xl text-muted">
           A short bio goes here — a couple of sentences about who you are,
           what you build, and what kind of internship you&apos;re looking
