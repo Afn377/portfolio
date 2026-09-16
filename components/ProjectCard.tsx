@@ -8,7 +8,7 @@ export function ProjectCard({ project }: { project: Project }) {
       className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-accent"
     >
       <img
-        src={project.sections[0].screenshot}
+        src={project.cardScreenshot}
         alt={`${project.title} screenshot`}
         className="h-40 w-full object-cover"
       />

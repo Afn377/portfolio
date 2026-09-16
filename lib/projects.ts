@@ -9,6 +9,7 @@ export type Project = {
   title: string;
   tagline: string;
   skills: string[];
+  cardScreenshot: string;
   links?: {
     github?: string;
     demo?: string;
@@ -19,74 +20,93 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "servicenow-rag-assistant",
-    title: "ServiceNow AI Ticket Resolution Assistant",
+    title: "ServiceNow Ticket Assistant",
     tagline:
-      "AI-powered RAG assistant that surfaces cited resolution steps inside ServiceNow via a Chrome extension.",
-    skills: [
-      "Python",
-      "FastAPI",
-      "RAG",
-      "Sentence Transformers",
-      "DeepSeek API",
-      "Docker",
-      "AWS",
-    ],
+      "A Chrome extension that turns support tickets into actionable troubleshooting steps, with knowledge-base citations and explicit uncertainty labels.",
+    skills: ["Python", "FastAPI", "RAG", "Chrome Extension"],
+    cardScreenshot: "/projects/servicenow-rag-assistant/card.svg",
     links: { github: "https://github.com/Afn377/ServiceNow-Ticket-RAG" },
     sections: [
       {
-        screenshot: "/placeholder-screenshot.svg",
-        heading: "Retrieval pipeline",
-        text: "Built a BGE embedding and semantic retrieval pipeline with Sentence Transformers and DeepSeek, achieving a 94.5% retrieval hit rate for relevant support knowledge across 200 test tickets.",
+        screenshot: "/projects/servicenow-rag-assistant/1.svg",
+        heading: "Help inside the support workflow",
+        text: "Support consultants need to connect a ticket's symptoms with the right troubleshooting documentation. I built a Chrome side panel that reads the current incident and presents suggested next steps alongside the ticket.",
       },
       {
-        screenshot: "/placeholder-screenshot.svg",
-        heading: "Real-world impact",
-        text: "Beta-tested with 10 consultants across 50 tickets, cutting average ticket-response time from 17 to 10 minutes (41%) — secured with client-side PII redaction and a Dockerized AWS backend.",
+        screenshot: "/projects/servicenow-rag-assistant/2.svg",
+        heading: "From ticket to cited recommendation",
+        text: "The pipeline searches 1,394 cleaned knowledge-base articles using BGE embeddings and category-aware ranking. DeepSeek turns the retrieved material into structured steps with source citations and SUPPORTED, INFERRED, or UNCERTAIN labels. At this scale, an in-memory NumPy index is enough — brute-force cosine similarity across all 1,394 articles finishes in single-digit milliseconds, so a dedicated vector database would only add operational complexity without a real latency win.",
+      },
+      {
+        screenshot: "/projects/servicenow-rag-assistant/3.svg",
+        heading: "Handling weak evidence",
+        text: "When retrieval falls below a minimum evidence threshold, the system skips generation and returns an insufficient-evidence response instead of guessing. Structured response validation and a retry path also handle malformed model output.",
+      },
+      {
+        screenshot: "/projects/servicenow-rag-assistant/4.svg",
+        heading: "Evaluating retrieval quality",
+        text: "On 200 hand-written evaluation tickets, an expected article appeared in the top five results for 189 of them — a 94.5% hit rate, with a mean reciprocal rank of 0.845. These numbers measure how well the system finds the right article, not whether a ticket actually got resolved.",
       },
     ],
   },
   {
     slug: "profiq",
-    title: "ProfIQ — AI-Powered Professor Analytics Platform",
+    title: "ProfIQ — Professor Analytics",
     tagline:
-      "Django + React platform for professor search, comparison, review analytics, and recommendations.",
-    skills: [
-      "Python",
-      "Django",
-      "React",
-      "PostgreSQL",
-      "PyTorch",
-      "Hugging Face",
-    ],
+      "Search and compare professors using student-review sentiment, recurring themes, and recommendations based on similar review profiles.",
+    skills: ["React", "Django REST", "NLP", "scikit-learn"],
+    cardScreenshot: "/projects/profiq/card.svg",
     sections: [
       {
-        screenshot: "/placeholder-screenshot.svg",
-        heading: "Full-stack system",
-        text: "Developed a Django REST + React system supporting professor search, filtering, comparison, review analytics, and recommendations, validated with 87 automated tests across backend and ML workflows.",
+        screenshot: "/projects/profiq/1.svg",
+        heading: "Make reviews easier to compare",
+        text: "ProfIQ brings professor search, review analytics, and comparison into one interface, helping students explore patterns across reviews before choosing a class.",
       },
       {
-        screenshot: "/placeholder-screenshot.svg",
-        heading: "ETL & ML at scale",
-        text: "Engineered a resumable ETL pipeline using the RateMyProfessors GraphQL and Reddit JSON APIs — with pagination, deduplication, checkpointing, and validation — to analyze 350K+ student reviews across 1.7M+ professor records, achieving 85.7% sentiment-classification accuracy with MiniLM-based recommendations.",
+        screenshot: "/projects/profiq/2.svg",
+        heading: "From individual reviews to a clearer profile",
+        text: "Professor profiles combine sentiment summaries, recurring review themes, and similar-professor recommendations. A comparison view places those signals side by side for two professors at once.",
+      },
+      {
+        screenshot: "/projects/profiq/3.svg",
+        heading: "Build a recoverable data pipeline",
+        text: "The professor catalog and review corpus are collected from the RateMyProfessors GraphQL API and Reddit's JSON API. Because collection runs long enough to get interrupted, the pipeline paginates through results, checkpoints progress, deduplicates records, and validates each batch — so a dropped connection resumes cleanly instead of re-fetching everything or creating duplicate entries.",
+      },
+      {
+        screenshot: "/projects/profiq/4.svg",
+        heading: "Choose models for the running application",
+        text: "The live app scores sentiment with a VADER baseline (with an optional TF-IDF and logistic-regression classifier), and recommends similar professors using MiniLM embeddings. A separate DistilBERT classifier was trained and evaluated offline — in that evaluation it reached 85.7% sentiment-classification accuracy on the labeled test set, a useful reference point rather than the model serving live traffic.",
       },
     ],
   },
   {
-    slug: "project-three",
-    title: "Project Three",
-    tagline: "A one-line description of what this project does.",
-    skills: ["Next.js", "Tailwind CSS", "Vercel"],
-    links: { demo: "https://project-three.vercel.app" },
+    slug: "ucl-match-forecasting",
+    title: "UCL Match Forecasting",
+    tagline:
+      "Forecast Champions League match outcomes using football statistics and market odds, with chronological evaluation and recorded pre-match predictions.",
+    skills: ["Python", "pandas", "scikit-learn", "Statistical Modeling"],
+    cardScreenshot: "/projects/ucl-match-forecasting/card.svg",
+    links: { github: "https://github.com/Afn377/UCL-Predictor" },
     sections: [
       {
-        screenshot: "/placeholder-screenshot.svg",
-        heading: "Overview",
-        text: "Describe the core feature shown in this screenshot and why it matters.",
+        screenshot: "/projects/ucl-match-forecasting/1.svg",
+        heading: "Predict probabilities, not just winners",
+        text: "The project estimates home-win, draw, and away-win probabilities for regulation-time Champions League matches, comparing football-based models against market-odds and base-rate benchmarks rather than just picking a winner.",
       },
       {
-        screenshot: "/placeholder-screenshot.svg",
-        heading: "Key feature",
-        text: "Describe a second feature or workflow shown here.",
+        screenshot: "/projects/ucl-match-forecasting/2.svg",
+        heading: "Build features available before kickoff",
+        text: "Each match is described using only information available before kickoff — Elo ratings, recent form, goals, rest days, fixture congestion, venue performance, and expected goals (xG) — built chronologically so no feature ever leaks information from after the match. Models retrain on a rolling two-year window ahead of each evaluation season.",
+      },
+      {
+        screenshot: "/projects/ucl-match-forecasting/3.svg",
+        heading: "Compare against meaningful baselines",
+        text: "Five models were compared on the same 966 UCL fixtures, evaluated on accuracy, log loss, and ranked probability score rather than accuracy alone. The closing-odds benchmark led at 62.22% accuracy, with a football/odds blend close behind at 61.80%. Football features alone (with xG) reached 59.83%, ahead of the 47.41% base rate — a sign the engineered features carry real signal, even though closing-market odds, gathered minutes before kickoff, remain a tough benchmark to beat. These are retrospective results on previously-inspected development seasons, not a held-out test of future accuracy.",
+      },
+      {
+        screenshot: "/projects/ucl-match-forecasting/4.svg",
+        heading: "Record predictions before results exist",
+        text: "A forecasting workflow freezes model artifacts, checks quote freshness and kickoff timing, and records each prediction in an append-only SQLite ledger before the match is played — so it can be scored later without any chance of hindsight leaking in. Quote collection is currently a manual step; automating live tracking is still on the roadmap.",
       },
     ],
   },

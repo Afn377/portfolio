@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#18181B"/>
+  <rect x="1" y="1" width="798" height="498" fill="none" stroke="#27272A" stroke-width="2"/>
+  <text x="400" y="240" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#94A3B8">Normal recommendation vs.</text>
+  <text x="400" y="270" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#94A3B8">insufficient-evidence state</text>
+</svg>

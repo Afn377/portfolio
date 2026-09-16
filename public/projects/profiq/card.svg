@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <rect width="800" height="300" fill="#18181B"/>
+  <rect x="1" y="1" width="798" height="298" fill="none" stroke="#27272A" stroke-width="2"/>
+  <text x="400" y="140" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#94A3B8">Card: professor comparison —</text>
+  <text x="400" y="170" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#94A3B8">two profiles, sentiment + themes</text>
+</svg>
