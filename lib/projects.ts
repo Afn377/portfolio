@@ -20,7 +20,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "servicenow-rag-assistant",
-    title: "ServiceNow Ticket Assistant",
+    title: "ServiceNow AI Ticket Resolution Assistant",
     tagline:
       "A Chrome extension that turns support tickets into actionable troubleshooting steps, with knowledge-base citations and explicit uncertainty labels.",
     skills: ["Python", "FastAPI", "RAG", "Chrome Extension"],
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     slug: "profiq",
-    title: "ProfIQ — Professor Analytics",
+    title: "ProfIQ — AI-Powered Professor Analytics Platform",
     tagline:
       "Search and compare professors using student-review sentiment, recurring themes, and recommendations based on similar review profiles.",
     skills: ["React", "Django REST", "NLP", "scikit-learn"],
