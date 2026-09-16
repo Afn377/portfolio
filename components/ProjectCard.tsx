@@ -5,19 +5,19 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group block overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-accent"
+      className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-accent"
     >
       <img
         src={project.sections[0].screenshot}
         alt={`${project.title} screenshot`}
         className="h-40 w-full object-cover"
       />
-      <div className="p-5">
+      <div className="flex flex-1 flex-col p-5">
         <h3 className="font-heading text-lg font-semibold text-foreground transition-colors group-hover:text-link">
           {project.title}
         </h3>
         <p className="mt-1 text-sm text-muted">{project.tagline}</p>
-        <ul className="mt-4 flex flex-wrap gap-2">
+        <ul className="mt-auto flex flex-wrap gap-2 pt-4">
           {project.skills.map((skill) => (
             <li
               key={skill}
