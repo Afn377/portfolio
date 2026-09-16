@@ -6,3 +6,5 @@ out
 .npm
 Library
 *.tsbuildinfo
+.vercel
+.env*
