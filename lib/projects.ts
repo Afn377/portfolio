@@ -75,7 +75,7 @@ export const projects: Project[] = [
       {
         screenshot: "/projects/profiq/4.jpg",
         heading: "Choose models for the running application",
-        text: "The live app scores every review with a fast VADER baseline (76.4% test accuracy) and an optional TF-IDF/logistic-regression classifier (80.2% accuracy, evaluated on a larger 52,445-review test set) as a second signal, then recommends similar professors using MiniLM embeddings — a separate task measured by a 4.17x department-purity lift, not sentiment accuracy. DistilBERT, evaluated offline only, reached the highest raw accuracy at 85.7%, but its macro-F1 was lower than the logistic-regression classifier's — which balances the underrepresented neutral class better — so it stayed out of the live path rather than becoming a straightforward upgrade.",
+        text: "The live app scores every review with a fast VADER baseline (76.4% test accuracy) and an optional TF-IDF/logistic-regression classifier (80.2% accuracy, evaluated on a larger 52,445-review test set) as a second signal, then recommends similar professors using MiniLM embeddings — a separate task measured by a 4.17x department-purity lift, not sentiment accuracy. DistilBERT, evaluated offline only, reached the highest raw accuracy at 85.7%, but transformer inference is too slow to run inline on every API request, and its macro-F1 of 0.64 trails the logistic-regression classifier's 0.72 — which balances the underrepresented neutral class better — so it remained a comparison point rather than a live upgrade.",
       },
     ],
   },
