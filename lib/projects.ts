@@ -43,7 +43,7 @@ export const projects: Project[] = [
         text: "Each recommended step carries its own confidence label — SUPPORTED means it's grounded directly in a cited KB article, INFERRED means the model reasoned beyond what's explicitly written. When retrieval turns up nothing usable at all, the system skips generation entirely and returns an insufficient-evidence response instead of guessing.",
       },
       {
-        screenshot: "/projects/servicenow-rag-assistant/4.svg",
+        screenshot: "/projects/servicenow-rag-assistant/4.jpg",
         heading: "Evaluating retrieval quality",
         text: "On 200 hand-written evaluation tickets, an expected article appeared in the top five results for 189 of them — a 94.5% hit rate, with a mean reciprocal rank of 0.845. These numbers measure how well the system finds the right article, not whether a ticket actually got resolved.",
       },
