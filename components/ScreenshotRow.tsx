@@ -20,7 +20,7 @@ export function ScreenshotRow({
         <img
           src={section.screenshot}
           alt={section.heading}
-          className="w-full flex-1 rounded-lg border border-border object-cover md:w-1/2"
+          className="w-full min-w-0 rounded-lg border border-border object-cover md:w-1/2"
         />
         <div className="flex-1">
           <h3 className="font-heading text-xl font-semibold text-foreground">
