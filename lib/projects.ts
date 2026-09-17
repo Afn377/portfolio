@@ -38,9 +38,9 @@ export const projects: Project[] = [
         text: "The pipeline searches 1,394 cleaned knowledge-base articles using BGE embeddings and category-aware ranking. DeepSeek turns the retrieved material into structured steps with source citations and SUPPORTED, INFERRED, or UNCERTAIN labels. At this scale, an in-memory NumPy index is enough — brute-force cosine similarity across all 1,394 articles finishes in single-digit milliseconds, so a dedicated vector database would only add operational complexity without a real latency win.",
       },
       {
-        screenshot: "/projects/servicenow-rag-assistant/3.svg",
+        screenshot: "/projects/servicenow-rag-assistant/3.jpg",
         heading: "Handling weak evidence",
-        text: "When retrieval falls below a minimum evidence threshold, the system skips generation and returns an insufficient-evidence response instead of guessing. Structured response validation and a retry path also handle malformed model output.",
+        text: "Each recommended step carries its own confidence label — SUPPORTED means it's grounded directly in a cited KB article, INFERRED means the model reasoned beyond what's explicitly written. When retrieval turns up nothing usable at all, the system skips generation entirely and returns an insufficient-evidence response instead of guessing.",
       },
       {
         screenshot: "/projects/servicenow-rag-assistant/4.svg",
