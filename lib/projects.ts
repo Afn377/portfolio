@@ -75,7 +75,7 @@ export const projects: Project[] = [
       {
         screenshot: "/projects/profiq/4.jpg",
         heading: "Choose models for the running application",
-        text: "The live app scores sentiment with a fast VADER baseline (with an optional TF-IDF and logistic-regression classifier) and recommends similar professors using MiniLM embeddings — none of these were benchmarked for accuracy, since speed matters more than precision for a live UI. DistilBERT was the one model formally evaluated offline, reaching 85.7% sentiment-classification accuracy on the labeled test set — a reference point for what's possible, not a production requirement.",
+        text: "The live app scores every review with a fast VADER baseline (76.4% test accuracy) and an optional TF-IDF/logistic-regression classifier (80.2% accuracy, evaluated on a larger 52,445-review test set) as a second signal, then recommends similar professors using MiniLM embeddings — a separate task measured by a 4.17x department-purity lift, not sentiment accuracy. DistilBERT, evaluated offline only, reached the highest raw accuracy at 85.7%, but its macro-F1 was lower than the logistic-regression classifier's — which balances the underrepresented neutral class better — so it stayed out of the live path rather than becoming a straightforward upgrade.",
       },
     ],
   },
