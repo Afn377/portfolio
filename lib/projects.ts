@@ -101,7 +101,7 @@ export const projects: Project[] = [
       {
         screenshot: "/projects/ucl-match-forecasting/3.jpg",
         heading: "Compare against meaningful baselines",
-        text: "Five models were compared on the same 966 UCL fixtures, evaluated on accuracy, log loss, and ranked probability score rather than accuracy alone. The closing-odds benchmark led at 62.22% accuracy, with a football/odds blend close behind at 61.80%. Football features alone (with xG) reached 59.83%, ahead of the 47.41% base rate — a sign the engineered features carry real signal, even though closing-market odds, gathered minutes before kickoff, remain a tough benchmark to beat. These are retrospective results on previously-inspected development seasons, not a held-out test of future accuracy.",
+        text: "Five models were compared on the same 966 UCL fixtures, evaluated on accuracy, log loss, and ranked probability score rather than accuracy alone. The closing-odds benchmark led at 62.22% accuracy, with a football/odds blend close behind at 61.80%. Football features alone (with xG) reached 59.83%, and a combined logistic model scored 58.70%, both comfortably ahead of the 47.41% base rate — a sign the engineered features carry real signal, even though closing-market odds, gathered minutes before kickoff, remain a tough benchmark to beat. These are retrospective results on previously-inspected development seasons, not a held-out test of future accuracy.",
       },
       {
         screenshot: "/projects/ucl-match-forecasting/4.jpg",
