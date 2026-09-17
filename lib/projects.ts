@@ -56,7 +56,7 @@ export const projects: Project[] = [
       "Search and compare professors using student-review sentiment, recurring themes, and recommendations based on similar review profiles.",
     skills: ["React", "Django REST", "NLP", "scikit-learn"],
     cardScreenshot: "/projects/profiq/card.jpg",
-    links: { github: "https://github.com/Afn377/ProfIQ" },
+    links: { github: "https://github.com/Afn377/ProfIQ", demo: "https://profiq.smafnanhaider.com" },
     sections: [
       {
         screenshot: "/projects/profiq/1.jpg",
