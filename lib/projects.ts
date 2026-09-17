@@ -24,7 +24,7 @@ export const projects: Project[] = [
     tagline:
       "A Chrome extension that turns support tickets into actionable troubleshooting steps, with knowledge-base citations and explicit uncertainty labels.",
     skills: ["Python", "FastAPI", "RAG", "Chrome Extension"],
-    cardScreenshot: "/projects/servicenow-rag-assistant/card.svg",
+    cardScreenshot: "/projects/servicenow-rag-assistant/card.jpg",
     links: { github: "https://github.com/Afn377/ServiceNow-Ticket-RAG" },
     sections: [
       {
