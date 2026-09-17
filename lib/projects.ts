@@ -28,12 +28,12 @@ export const projects: Project[] = [
     links: { github: "https://github.com/Afn377/ServiceNow-Ticket-RAG" },
     sections: [
       {
-        screenshot: "/projects/servicenow-rag-assistant/1.svg",
+        screenshot: "/projects/servicenow-rag-assistant/1.jpg",
         heading: "Help inside the support workflow",
         text: "Support consultants need to connect a ticket's symptoms with the right troubleshooting documentation. I built a Chrome side panel that reads the current incident and presents suggested next steps alongside the ticket.",
       },
       {
-        screenshot: "/projects/servicenow-rag-assistant/2.svg",
+        screenshot: "/projects/servicenow-rag-assistant/2.jpg",
         heading: "From ticket to cited recommendation",
         text: "The pipeline searches 1,394 cleaned knowledge-base articles using BGE embeddings and category-aware ranking. DeepSeek turns the retrieved material into structured steps with source citations and SUPPORTED, INFERRED, or UNCERTAIN labels. At this scale, an in-memory NumPy index is enough — brute-force cosine similarity across all 1,394 articles finishes in single-digit milliseconds, so a dedicated vector database would only add operational complexity without a real latency win.",
       },
