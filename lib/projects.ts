@@ -66,17 +66,17 @@ export const projects: Project[] = [
       {
         screenshot: "/projects/profiq/2.jpg",
         heading: "From individual reviews to a clearer profile",
-        text: "Professor profiles combine sentiment summaries, recurring review themes, and similar-professor recommendations. A comparison view places those signals side by side for two professors at once.",
+        text: "Professor profiles combine sentiment summaries, recurring review themes, and similar-professor recommendations. A comparison view places those signals side by side for up to four professors at once.",
       },
       {
         screenshot: "/projects/profiq/3.jpg",
         heading: "Build a recoverable data pipeline",
-        text: "The professor catalog and review corpus are collected from the RateMyProfessors GraphQL API and Reddit's JSON API. Because collection runs long enough to get interrupted, the pipeline paginates through results, checkpoints progress, deduplicates records, and validates each batch — so a dropped connection resumes cleanly instead of re-fetching everything or creating duplicate entries.",
+        text: "The professor catalog and review corpus are collected from the RateMyProfessors GraphQL API. Because collection runs long enough to get interrupted, the pipeline paginates through results, checkpoints progress, and deduplicates records, so a dropped connection resumes cleanly instead of re-fetching everything or creating duplicate entries.",
       },
       {
         screenshot: "/projects/profiq/4.jpg",
         heading: "Choose models for the running application",
-        text: "The live app scores every review with a fast VADER baseline (76.4% test accuracy) and an optional TF-IDF/logistic-regression classifier (80.2% accuracy, evaluated on a larger 52,445-review test set) as a second signal, then recommends similar professors using MiniLM embeddings — a separate task measured by a 4.17x department-purity lift, not sentiment accuracy. DistilBERT, evaluated offline only, reached the highest raw accuracy at 85.7%, but transformer inference is too slow to run inline on every API request, and its macro-F1 of 0.64 trails the logistic-regression classifier's 0.72 — which balances the underrepresented neutral class better — so it remained a comparison point rather than a live upgrade.",
+        text: "The live app scores every review with a VADER-based rule engine extended with a professor-review lexicon (76.4% test accuracy, text only) and, when available, a TF-IDF/logistic-regression classifier (80.2% accuracy on a larger 52,445-review test set) as a second signal. It then recommends similar professors using MiniLM embeddings — a separate task measured by a 4.17x department-purity lift over random on a 1,001-professor sample, not by sentiment accuracy. DistilBERT was evaluated offline only. It reached the highest accuracy at 85.7%, but it was fine-tuned on just 8,000 reviews and scored on the smaller 7,427-review test set that VADER used, so its numbers aren't directly comparable to the classifier's. Transformer inference is also too slow to run inline on every API request, so it remained a comparison point rather than a live upgrade.",
       },
     ],
   },
