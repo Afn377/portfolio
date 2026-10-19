@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/Reveal";
 
 const links = [
-  { label: "Email", href: "mailto:sm.afnan.haider@gmail.com" },
+  { label: "Email", href: "mailto:smafnanhaider@gmail.com" },
   { label: "GitHub", href: "https://github.com/Afn377" },
   { label: "LinkedIn", href: "https://linkedin.com/in/AfnanHaider" },
 ];
